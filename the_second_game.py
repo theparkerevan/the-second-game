@@ -7,7 +7,7 @@ import directory
 class TheSecondGame:
     def __init__(self):
         # The game directory
-        self.directory = directory.Directory
+        self.directory = directory.Directory()
     
 
     def run(self):

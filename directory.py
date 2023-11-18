@@ -7,4 +7,8 @@ import rendering_engine
 
 class Directory:
     def __init__(self):
+        print("Directory Called")
+
         self.RenderingEngine = rendering_engine.RenderingEngine()
+        
+        print("Directory Created")

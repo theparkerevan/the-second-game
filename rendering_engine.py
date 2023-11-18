@@ -6,8 +6,9 @@ import pygame
 
 class RenderingEngine:
     def __init__(self):
-        print("Rendering Engine Initializing")
+        print("Rendering Engine Called")
 
+        # Going to need a lot of layers, so make them here.
         
 
         print("Rendering Engine Created")
