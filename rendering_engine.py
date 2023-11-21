@@ -5,9 +5,11 @@ import pygame
 # Draws them when asked.
 
 class RenderingEngine:
-    def __init__(self):
+    def __init__(self, directory):
         print("Rendering Engine Called")
 
+        self.directory = directory
+        
         # Going to need a lot of layers, so make them here.
         
 
