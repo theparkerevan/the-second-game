@@ -18,19 +18,27 @@ class TheSecondGame:
         self.window = pygame.display.set_mode((self.window_width, self.window_height))
         
         # Rendering
-        self.RenderingEngine = rendering_engine.RenderingEngine(self.directory)
+        self.RenderingEngine = rendering_engine.RenderingEngine(self.directory, self.window)
         self.directory.RenderingEngine = self.RenderingEngine
 
         # Flags
         self.running = True
+
+        # Clock. FPS. Stuff
+        self.FPS = 60
+        self.clock = pygame.time.Clock()
     
 
     def eventHandler(self):
+        # EVENTS!
         for event in pygame.event.get():
+            # Clicking the 'X' in the top right
             if event.type == pygame.QUIT:
                 self.running = False
             
+            # All Key Presses
             if event.type == pygame.KEYDOWN:
+                # Escape Key Quits the game for now.
                 if event.key == pygame.K_ESCAPE:
                     self.running = False
 
@@ -38,3 +46,5 @@ class TheSecondGame:
     def run(self):
         while self.running:
             self.eventHandler()
+            self.RenderingEngine.draw()
+            self.clock.tick()
