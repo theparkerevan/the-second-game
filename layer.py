@@ -4,6 +4,10 @@ class Layer:
         self.surface = surface
         self.weight = weight
 
+
+    def clear(self):
+        self.surface.fill((0, 0, 0, 0))
+
     
     def draw(self):
         self.window.blit(self.surface, (0, 0))

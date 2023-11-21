@@ -15,10 +15,16 @@ class RenderingEngine:
         self.window = window
 
         # Going to need a lot of layers, so make them here.
+        self.test_layer = layer.Layer(self.window, pygame.surface.Surface((1280, 720)).convert_alpha(), 5)
         
 
         print("Rendering Engine Created")
     
+
+    def clearAll(self):
+        # Clears all layers by filling them with Clear Color
+        self.test_layer.clear()
+
 
     def draw(self):
         # Filling window a default background color.
@@ -26,7 +32,7 @@ class RenderingEngine:
         # Is very green for fast recognition.
         self.window.fill((50, 250, 100))
 
-
+        self.test_layer.draw()
 
         # Update Display
         pygame.display.flip()

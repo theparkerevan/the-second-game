@@ -45,6 +45,7 @@ class TheSecondGame:
 
     def run(self):
         while self.running:
+            self.RenderingEngine.clearAll()
             self.eventHandler()
             self.RenderingEngine.draw()
             self.clock.tick()
