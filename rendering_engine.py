@@ -1,4 +1,5 @@
 import pygame
+import layer
 
 # Not sure if 'engine' is the right word here, but I think it's silly.
 # Hold all the layers, keeps them sorted according to their weights.
