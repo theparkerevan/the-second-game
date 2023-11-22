@@ -41,11 +41,29 @@ class TheSecondGame:
                 # Escape Key Quits the game for now.
                 if event.key == pygame.K_ESCAPE:
                     self.running = False
+                
+                # Using this to test stuff
+                if event.key == pygame.K_SPACE:
+                    self.RenderingEngine.sort()
+
+
+    def update(self):
+        ...
 
 
     def run(self):
         while self.running:
+            # Clean slate, artisitcally speaking
             self.RenderingEngine.clearAll()
+
+            # Check for user input and react to it
             self.eventHandler()
+
+            # Update the frame
+            self.update()
+
+            # Draw
             self.RenderingEngine.draw()
+
+            # Wait till next frame
             self.clock.tick()
